@@ -1,0 +1,209 @@
+@import '../../scss/default.module.scss';
+
+.div {
+    @extend %flex;
+    height          : 800px;
+    width           : 1200px;
+    border-radius   : 12px;
+    background-color: #ffffff;
+}
+
+.mask {
+    @extend %flex;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    height          : 100%;
+    width           : 100%;
+    background-color: #00000071;
+}
+
+.title {
+    @extend %flex,
+    %font_inputfield;
+    color: #555555;
+}
+
+.error {
+    @extend %flex,
+    %font_adorn;
+    color: #ff0000;
+}
+
+.inputfield {
+    @extend %flex,
+    %font_inputfield;
+    margin                 : 2px 0;
+    padding                : 12px;
+    height                 : 15px;
+    width                  : 200px;
+    border                 : 1.4px solid #d1d1d1;
+    border-radius          : 5px;
+    box-shadow             : 0 0 2px #d1d1d1;
+    color                  : #d1d1d1; //caret
+    -webkit-text-fill-color: #222222; //text
+    background             : none;
+    outline                : none;
+    cursor                 : pointer;
+}
+
+.inputfield:focus {
+    border    : 1.4px solid #ff9900;
+    box-shadow: 0 0 2px #ff9900;
+}
+
+.inputfield_div {
+    @extend %flex;
+    margin     : 0 10px 0 0;
+    align-items: flex-start;
+}
+
+.textarea {
+    @extend %flex,
+    %font_inputfield;
+    margin                 : 2px 0;
+    padding                : 12px;
+    height                 : 80px;
+    width                  : 400px;
+    border                 : 1.4px solid #d1d1d1;
+    border-radius          : 5px;
+    box-shadow             : 0 0 2px #d1d1d1;
+    color                  : #d1d1d1; //caret
+    -webkit-text-fill-color: #222222; //text
+    background             : none;
+    outline                : none;
+    resize                 : none;
+    cursor                 : pointer;
+}
+
+.textarea:focus {
+    border    : 1.4px solid #ff9900;
+    box-shadow: 0 0 2px #ff9900;
+}
+
+.textarea::-webkit-scrollbar {
+    width: 3px !important;
+}
+
+.textarea::-webkit-scrollbar-track {
+    margin    : 10px;
+    background: #e9e9e9;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+}
+
+.textarea_div {
+    @extend %flex;
+    align-items: flex-start;
+}
+
+.checkbox {
+    @extend %flex;
+    margin        : 5px 0;
+    flex-direction: row;
+}
+
+.checkbox_div {
+    @extend %flex;
+    align-items: flex-start;
+}
+
+.checkbox_label {
+    @extend %flex,
+    %font_inputfield;
+    margin        : 0 50px 0 0;
+    flex-direction: row;
+    cursor        : pointer;
+}
+
+.checkbox_label>input {
+    display: none;
+}
+
+.checkbox_label>svg {
+    margin: 0 5px 0 0;
+    color : #d1d1d1; //caret
+}
+
+.checkbox_label>svg:nth-child(2) {
+    display: none;
+}
+
+.checkbox_label>input:checked~svg:nth-child(2) {
+    display: block;
+    color  : #ff9900; //caret
+}
+
+.checkbox_label>input:checked~svg:nth-child(3) {
+    display: none;
+}
+
+.button {
+    @extend %flex,
+    %font_adorn;
+    margin          : 0 10px 0 0;
+    padding         : 12px 30px;
+    background-color: #2663d4;
+    color           : #ffffff;
+    border-radius   : 3px;
+    border          : none;
+    outline         : none;
+    cursor          : pointer;
+}
+
+.sort_checkbox {
+    @extend %flex;
+    margin        : 20px 0;
+}
+
+.sort_checkbox_inputfield {
+    @extend %flex,
+    %font_inputfield;
+    margin                 : 5px 0;
+    padding                : 12px;
+    height                 : 15px;
+    width                  : 200px;
+    border                 : 1.4px solid #d1d1d1;
+    border-radius          : 5px;
+    box-shadow             : 0 0 2px #d1d1d1;
+    background             : none;
+    outline                : none;
+}
+
+.sort_checkbox_div {
+    @extend %flex;
+    align-items: flex-start;
+}
+
+.sort_checkbox_label {
+    @extend %flex,
+    %font_inputfield;
+    margin        : 0 0 20px 0;
+    flex-direction: row;
+    cursor        : pointer;
+}
+
+.sort_checkbox_label>div {
+    @extend %flex,
+    %font_adorn;
+    margin          : 0 5px 0 0;
+    height: 24px;
+    width: 24px;
+    background-color: none;
+    border          : 1.4px solid #d1d1d1;
+    border-radius   : 3px;
+    box-shadow      : 0 0 2px #d1d1d1;
+}
+
+.sort_checkbox_label>input {
+    display: none;
+}
+
+.sort_checkbox_label>input:checked~div {
+    color           : #ffffff;
+    background-color: #ff9900;
+    border          : 1.4px solid #ff9900;
+    box-shadow      : 0 0 2px #ff9900;
+}
